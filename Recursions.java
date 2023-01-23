@@ -35,7 +35,7 @@ public class Recursions {
         return fib(n - 1) + fib(n - 2);
     }
     
-    // --- Factorial with Recursion
+    // --- Factoria l with Recursion
     
     public static int fact(int n){
         if(n==1){
