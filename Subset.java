@@ -25,4 +25,22 @@ class Subset{
         subset(pd+c, upd.substring(1),list);
         // subset(pd+(int)c, upd.substring(1),list);  //for ascii value
     }
+    public static void subsetbitwise(int[] arr) {
+        int limit=(int) Math.pow(2, arr.length);
+        for (int i = 0; i < limit; i++) {
+            String set="";
+            int temp=i;
+            for (int j = arr.length-1; j >=0; j--) {
+                int rem =temp%2;
+                temp/=2;
+                if(rem==0){
+                    set="-"+" "+set;
+                }
+                else{
+                    set=arr[j]+" "+set;
+                }
+            }
+            System.out.println(set);
+        }
+    }
 }
